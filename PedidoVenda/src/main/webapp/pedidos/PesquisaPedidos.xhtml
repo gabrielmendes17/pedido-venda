@@ -20,34 +20,35 @@
 	    		</p:toolbarGroup>
 	    	</p:toolbar>
 	    	
-	    	<p:panelGrid columns="2" id="painel" style="width: 100%; margin-top: 20px"
-	    			columnClasses="rotulo, campo">
-	    		<p:outputLabel value="Número" />
+	    	<p:panelGrid columns="2" id="painel" columnClasses="rotulo, campo" style="width: 100%;margin-top:20px">
+
+	    		<p:outputLabel value="Número"/>
 	    		<h:panelGroup>
-	    			<p:inputText size="10" />
+	    			<p:inputText size="10"/>
 	    			a
-	    			<p:inputText size="10" />
+	    			<p:inputText size="10"/>
+	    		</h:panelGroup>
+
+	    		<p:outputLabel value="Data de criação"/>
+	    		<h:panelGroup>
+	    			<p:inputText size="10"/>
+	    			a
+	    			<p:inputText size="10"/>
 	    		</h:panelGroup>
 	    		
-	    		<p:outputLabel value="Data de criação" />
-	    		<h:panelGroup>
-	    			<p:calendar size="10" pattern="dd/MM/yyyy"/>
-	    			a
-	    			<p:calendar size="10" pattern="dd/MM/yyyy"/>
-	    		</h:panelGroup>
+	    		<p:outputLabel value="Vendedor"/>
+	    		<p:inputText size="40"/>
 	    		
-	    		<p:outputLabel value="Vendedor" />
-	    		<p:inputText size="40" />
+	    		<p:outputLabel value="Cliente"/>
+	    		<p:inputText size="40"/>
 	    		
-	    		<p:outputLabel value="Cliente" />
-	    		<p:inputText size="40" />
-	    		
-	    		<p:outputLabel value="Status" />
+	    		<p:outputLabel value="Status"/>
 	    		<p:selectManyCheckbox>
-	    			<f:selectItem itemLabel="Orçamento" />
-	    			<f:selectItem itemLabel="Emitido" />
-	    			<f:selectItem itemLabel="Cancelado" />
+	    			<f:selectItem itemLabel="Orçamento"/>
+	    			<f:selectItem itemLabel="Emitido"/>
+	    			<f:selectItem itemLabel="Cancelado"/>
 	    		</p:selectManyCheckbox>
+	    	
 	    	</p:panelGrid>
 	    	
 	    	<p:dataTable id="pedidosTable" value="#{pesquisaPedidosBean.pedidosFiltrados}" var="pedido"
